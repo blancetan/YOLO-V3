@@ -1,0 +1,1 @@
+{"path":"D:\\txl\\other_project\\YOLO V3\\data\\images\\2.jpg","outputs":{"object":[{"name":"0","bndbox":{"xmin":190,"ymin":83,"xmax":278,"ymax":383}},{"name":"1","bndbox":{"xmin":404,"ymin":131,"xmax":604,"ymax":349}},{"name":"2","bndbox":{"xmin":65,"ymin":261,"xmax":202,"ymax":344}}]},"time_labeled":1581913316393,"labeled":true,"size":{"width":640,"height":424,"depth":3}}

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<doc>
+	<path>D:\txl\other_project\YOLO V3\data\images\1.jpg</path>
+	<outputs>
+		<object>
+			<item>
+				<name>2</name>
+				<bndbox>
+					<xmin>64</xmin>
+					<ymin>265</ymin>
+					<xmax>202</xmax>
+					<ymax>344</ymax>
+				</bndbox>
+			</item>
+			<item>
+				<name>0</name>
+				<bndbox>
+					<xmin>190</xmin>
+					<ymin>98</ymin>
+					<xmax>274</xmax>
+					<ymax>378</ymax>
+				</bndbox>
+			</item>
+			<item>
+				<name>1</name>
+				<bndbox>
+					<xmin>408</xmin>
+					<ymin>137</ymin>
+					<xmax>601</xmax>
+					<ymax>337</ymax>
+				</bndbox>
+			</item>
+		</object>
+	</outputs>
+	<time_labeled>1581912921562</time_labeled>
+	<labeled>true</labeled>
+	<size>
+		<width>640</width>
+		<height>424</height>
+		<depth>3</depth>
+	</size>
+</doc>
