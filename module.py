@@ -1,5 +1,14 @@
-import torch
+#!/usr/bin/env python3
+#_*_ coding: utf-8 _*_
 
+"""
+ @DateTime: 12/2/2020 9:43
+ @Author:   balanceTan
+ @File:     module.py
+ @Software: PyCharm
+"""
+
+import torch
 
 class UpsampleLayer(torch.nn.Module):
 

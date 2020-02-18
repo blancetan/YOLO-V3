@@ -1,13 +1,22 @@
+#!/usr/bin/env python3
+#_*_ coding: utf-8 _*_
+
+"""
+ @DateTime: 11/2/2020 16:30
+ @Author:   balanceTan
+ @File:     trainer.py
+ @Software: PyCharm
+"""
+
 import dataset
 from module import *
-
 
 def loss_fn(output, target, alpha):
     output = output.permute(0, 2, 3, 1)
     output = output.reshape(output.size(0), output.size(1), output.size(2), 3, -1)
 
-    mask_obj = target[..., 0] > 0               # postive mask
-    mask_noobj = target[..., 0] == 0            # navigate mask
+    mask_obj = target[..., 0] > 0
+    mask_noobj = target[..., 0] == 0
 
     loss_obj = torch.mean((output[mask_obj] - target[mask_obj]) ** 2)
     loss_noobj = torch.mean((output[mask_noobj] - target[mask_noobj]) ** 2)

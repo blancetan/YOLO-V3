@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+#_*_ coding: utf-8 _*_
+
+"""
+ @DateTime: 12/2/2020 9:43
+ @Author:   balanceTan
+ @File:     darknet53.py
+ @Software: PyCharm
+"""
+
 import torch
 
 

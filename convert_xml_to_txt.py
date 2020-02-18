@@ -4,7 +4,7 @@
 """
  @DateTime: 13/2/2020 11:03
  @Author:   balanceTan 
- @File:     convert1.py
+ @File:     convert_xml_to_txt.py
  @Software: PyCharm
  
 """

@@ -1,14 +1,22 @@
+#!/usr/bin/env python3
+#_*_ coding: utf-8 _*_
+
+"""
+ @DateTime: 12/2/2020 15:44
+ @Author:   balanceTan
+ @File:     detector.py
+ @Software: PyCharm
+
+"""
+
 from module import *
 import cfg
-
 
 class Detector(torch.nn.Module):
 
     def __init__(self):
         super(Detector, self).__init__()
-
         self.net = Darknet53()
-
         self.net.eval()
 
     def forward(self, input, thresh, anchors):
@@ -52,4 +60,4 @@ class Detector(torch.nn.Module):
 if __name__ == '__main__':
     detector = Detector()
     y = detector(torch.randn(3, 3, 416, 416), 0.3, cfg.ANCHORS_GROUP)
-    print(y.shape)  # TODO  缺少NMS功能
+    print(y.shape)
