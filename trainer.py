@@ -10,6 +10,7 @@
 
 import dataset
 from module import *
+from torch.utils.tensorboard import SummaryWriter
 
 def loss_fn(output, target, alpha):
     output = output.permute(0, 2, 3, 1)
@@ -32,6 +33,7 @@ if __name__ == '__main__':
     net.train()
 
     opt = torch.optim.Adam(net.parameters())
+    writer = SummaryWriter('./path_to_log_dir')    # create writer object
 
     for target_13, target_26, target_52, img_data in train_loader:
         output_13, output_26, output_52 = net(img_data)
@@ -44,5 +46,8 @@ if __name__ == '__main__':
         opt.zero_grad()
         loss.backward()
         opt.step()
+
+        writer.add_scalar('loss', loss.item())  # add scalar data
+        writer.flush()  # flush
 
         print(loss.item())
